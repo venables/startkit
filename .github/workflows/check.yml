@@ -15,10 +15,10 @@ jobs:
       AUTH_SECRET: secret
       # DATABASE_URL: <url>
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - uses: oven-sh/setup-bun@v1
         with:
           bun-version: latest
-      - uses: actions/setup-node@v3
+      - uses: actions/setup-node@v4
       - run: bun run setup
       - run: bun run check
