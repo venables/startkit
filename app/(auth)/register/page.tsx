@@ -19,7 +19,7 @@ export default function RegisterPage() {
           className="z-20 flex items-center bg-transparent text-lg font-medium text-primary transition-colors hover:bg-accent lg:text-primary-foreground lg:hover:bg-primary-foreground/10 lg:hover:text-primary-foreground"
         >
           <Link href="/">
-            <Logo className="mr-2 h-6 w-6" />
+            <Logo className="mr-2 size-6" />
             {siteConfig.name}
           </Link>
         </Button>
@@ -29,7 +29,7 @@ export default function RegisterPage() {
         </Button>
       </div>
 
-      <div className="relative hidden h-full flex-col bg-muted p-10 text-primary-foreground lg:flex dark:border-r">
+      <div className="relative hidden h-full flex-col bg-muted p-10 text-primary-foreground dark:border-r lg:flex">
         <div className="absolute inset-0 h-full bg-primary" />
 
         <div className="relative z-20 mt-auto">

@@ -25,7 +25,7 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <>
-      <section className="mx-auto mt-12 flex h-full w-full max-w-4xl grow flex-col sm:flex-row sm:items-center">
+      <section className="mx-auto mt-12 flex size-full max-w-4xl grow flex-col sm:flex-row sm:items-center">
         <div className="flex flex-1 flex-col items-center text-center">
           <Badge className="font-bold sm:text-lg" variant="secondary">
             {siteConfig.name}
@@ -103,7 +103,7 @@ export default function Home() {
               rel="noreferrer"
               target="_blank"
             >
-              <GithubIcon className="mr-2 h-4 w-4" />
+              <GithubIcon className="mr-2 size-4" />
               <span>
                 View Source on <span className="font-bold">GitHub</span>
               </span>

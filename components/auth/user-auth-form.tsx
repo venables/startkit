@@ -146,9 +146,9 @@ export function UserAuthForm({ className, ...props }: Props) {
             variant="default"
           >
             {form.formState.isSubmitting ? (
-              <Spinner className="mr-2 h-4 w-4" />
+              <Spinner className="mr-2 size-4" />
             ) : (
-              <MailIcon className="mr-2 h-4 w-4" />
+              <MailIcon className="mr-2 size-4" />
             )}
             Sign In with Email
           </Button>

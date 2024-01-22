@@ -15,7 +15,7 @@ export default function LegalLayout({ children }: Props) {
       <div className="container mx-auto p-6">
         <Button asChild variant="ghost">
           <Link href="/">
-            <ChevronLeftIcon className="mr-2 h-4 w-4" />
+            <ChevronLeftIcon className="mr-2 size-4" />
             <span>Back</span>
           </Link>
         </Button>

@@ -50,9 +50,9 @@ export function ExternalAuthButton({
       variant="outline"
     >
       {isExternalAuthLoading ? (
-        <Spinner className="mr-2 h-4 w-4" />
+        <Spinner className="mr-2 size-4" />
       ) : (
-        <ProviderIcon className="mr-2 h-6 w-6" />
+        <ProviderIcon className="mr-2 size-6" />
       )}{" "}
       Sign in with {PROVIDERS[provider].name}
     </Button>

@@ -51,10 +51,10 @@ export function UserNav({ user }: UserNavProps) {
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
           <Button
-            className="relative h-8 w-8 rounded-full transition-all"
+            className="relative size-8 rounded-full transition-all"
             variant="ghost"
           >
-            <Avatar className="h-8 w-8">
+            <Avatar className="size-8">
               <AvatarImage
                 alt={user.name ?? user.email ?? undefined}
                 referrerPolicy="no-referrer"

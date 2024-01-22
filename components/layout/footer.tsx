@@ -28,7 +28,7 @@ export function Footer() {
             <Button asChild key={item.name} variant="ghost">
               <Link href={item.href} rel="noopener noreferrer" target="_blank">
                 <span className="sr-only">{item.name}</span>
-                <item.icon aria-hidden="true" className="h-5 w-5" />
+                <item.icon aria-hidden="true" className="size-5" />
               </Link>
             </Button>
           ))}

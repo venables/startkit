@@ -65,12 +65,12 @@ export function Features() {
         >
           {href ? (
             <Link href={href} rel="noreferrer" target="_blank">
-              <CheckIcon className="h-4 w-4" />
+              <CheckIcon className="size-4" />
               <span>{title}</span>
             </Link>
           ) : (
             <>
-              <CheckIcon className="h-4 w-4" />
+              <CheckIcon className="size-4" />
               <span>{title}</span>
             </>
           )}

@@ -1,8 +1,8 @@
 diff --git a/node_modules/@auth/drizzle-adapter/index.d.ts b/node_modules/@auth/drizzle-adapter/index.d.ts
-index d7dc263..bb0a619 100644
+index b59cb82..7d0400a 100644
 --- a/node_modules/@auth/drizzle-adapter/index.d.ts
 +++ b/node_modules/@auth/drizzle-adapter/index.d.ts
-@@ -241,5 +241,5 @@ import type { Adapter } from "@auth/core/adapters";
+@@ -245,5 +245,5 @@ import type { Adapter } from "@auth/core/adapters";
   * ---
   *
   **/
@@ -11,10 +11,10 @@ index d7dc263..bb0a619 100644
  //# sourceMappingURL=index.d.ts.map
 \ No newline at end of file
 diff --git a/node_modules/@auth/drizzle-adapter/index.js b/node_modules/@auth/drizzle-adapter/index.js
-index f3344e5..5ca4bd6 100644
+index 07a8a9e..6a88c04 100644
 --- a/node_modules/@auth/drizzle-adapter/index.js
 +++ b/node_modules/@auth/drizzle-adapter/index.js
-@@ -246,12 +246,12 @@ import { is } from "drizzle-orm";
+@@ -250,12 +250,12 @@ import { is } from "drizzle-orm";
   * ---
   *
   **/
