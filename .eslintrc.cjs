@@ -18,22 +18,16 @@ module.exports = {
   },
   overrides: [
     /**
-     * Disable type checking for JavaScript files
-     */
-    // {
-    //   files: ["*.js"],
-    //   extends: ["plugin:@typescript-eslint/disable-type-checked"]
-    // },
-    /**
      * Config files (ex: jest.config.js, prettier.config.js, tailwind.config.js)
      */
     {
-      files: ["*.config.js"],
+      files: ["*.config.{js,ts}"],
       env: {
         node: true
       },
       rules: {
-        "@typescript-eslint/no-var-requires": "off"
+        "@typescript-eslint/no-var-requires": "off",
+        "import/no-default-export": "off"
       }
     },
     /**

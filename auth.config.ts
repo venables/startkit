@@ -6,12 +6,9 @@ import { HttpEmailProvider } from "@/lib/auth/http-email-provider"
 
 import { adapter } from "./lib/db/adapter"
 
-/**
- * https://auth-docs-git-feat-nextjs-auth-authjs.vercel.app/guides/upgrade-to-v5#edge-compatibility
- */
 export default {
   /**
-   * https://authjs.dev/reference/adapter/drizzle
+   * @see {@link https://authjs.dev/reference/adapter/drizzle}
    */
   adapter,
 

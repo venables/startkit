@@ -1,5 +1,20 @@
 #!/usr/bin/env sh
 
+# This function adds a secret to the .env.local file, unless the key is already
+# defined.  This allows us to add new default values even if a .env.local file
+# alrady exists
+define_secret() {
+  local secret_name=$1
+  local secret_value=$2
+
+  if ! grep -q "^${secret_name}=" .env.local; then
+    echo "  > Setting '${secret_name}' ..."
+    echo "${secret_name}=\"${secret_value}\"" >> .env.local
+  else
+    echo "  > '${secret_name}' already defined, skipping ..."
+  fi
+}
+
 #
 # Install dependencies
 #
@@ -9,14 +24,12 @@ bun install --frozen-lockfile
 #
 # Create a .env.local file and popupate it with auto-generated secrets
 #
-if ! [ -f .env.local ]; then
-  echo "\n✨ Creating a .env.local file for local environment variables..."
-  touch .env.local
+echo "\n✨ Creating a .env.local file for local environment variables..."
+touch .env.local
 
-  echo "\n✨ Generating a secure value for local AUTH_SECRET ..."
-  echo "AUTH_SECRET=\"$(openssl rand -base64 32)\"" >> .env.local
-  echo "AUTH_URL=\"http://localhost:3000\"" >> .env.local
-fi
+echo "\n✨ Generating a secure value for local AUTH_SECRET ..."
+define_secret "AUTH_SECRET" "$(openssl rand -base64 32)"
+define_secret "AUTH_URL" "http://localhost:3000/api/auth"
 
 #
 # Migrate the database

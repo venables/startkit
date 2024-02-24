@@ -1,11 +1,15 @@
 import { eq } from "drizzle-orm"
-import { type SendVerificationRequestParams } from "next-auth/providers"
+import { type EmailConfig } from "next-auth/providers"
 
 import { usersTable } from "@/drizzle/schema"
 import SignInEmail from "@/emails/signin-email"
 import { env } from "@/env"
 import { db } from "@/lib/db"
 import { emailClient } from "@/lib/email"
+
+type SendVerificationRequestParams = Parameters<
+  EmailConfig["sendVerificationRequest"]
+>[0]
 
 export async function sendVerificationRequest({
   identifier: email,

@@ -30,7 +30,7 @@ index 07a8a9e..6a88c04 100644
      else if (is(db, BaseSQLiteDatabase)) {
          return SQLiteDrizzleAdapter(db, table);
 diff --git a/node_modules/@auth/drizzle-adapter/lib/pg.d.ts b/node_modules/@auth/drizzle-adapter/lib/pg.d.ts
-index 1d434a0..0cf755c 100644
+index 600af0e..e08e1f3 100644
 --- a/node_modules/@auth/drizzle-adapter/lib/pg.d.ts
 +++ b/node_modules/@auth/drizzle-adapter/lib/pg.d.ts
 @@ -295,5 +295,5 @@ export declare function createTables(pgTable: PgTableFn): {
@@ -42,10 +42,10 @@ index 1d434a0..0cf755c 100644
  //# sourceMappingURL=pg.d.ts.map
 \ No newline at end of file
 diff --git a/node_modules/@auth/drizzle-adapter/lib/pg.js b/node_modules/@auth/drizzle-adapter/lib/pg.js
-index f3d333f..647fd60 100644
+index 2ae39ca..c0cad4b 100644
 --- a/node_modules/@auth/drizzle-adapter/lib/pg.js
 +++ b/node_modules/@auth/drizzle-adapter/lib/pg.js
-@@ -41,13 +41,13 @@ export function createTables(pgTable) {
+@@ -42,13 +42,13 @@ export function createTables(pgTable) {
      }));
      return { users, accounts, sessions, verificationTokens };
  }

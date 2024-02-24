@@ -6,6 +6,7 @@ declare module "next-auth" {
   /**
    * Add additional attributes to the session object.
    */
+  // eslint-disable-next-line @typescript-eslint/consistent-type-definitions -- This is a module augmentation
   interface Session {
     user?: {
       /** The user's id. */
@@ -13,6 +14,7 @@ declare module "next-auth" {
     } & DefaultSession["user"]
   }
 }
+
 /**
  *
  * All NextAuth config should be defined in `./auth.config.ts` to allow for us
