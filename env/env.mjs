@@ -39,7 +39,7 @@ export const env = createEnv({
      * Email
      */
     EMAIL_FROM: z.string(),
-    RESEND_API_KEY: z.string().optional()
+    POSTMARK_API_KEY: z.string().default("")
   },
   /**
    * Shared between server and client

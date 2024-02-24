@@ -29,7 +29,7 @@ export function Features() {
       { title: "TailwindCSS", href: "https://tailwindcss.com" },
       { title: "Radix UI", href: "https://www.radix-ui.com" },
       { title: "PostgreSQL" },
-      { title: "Email via Resend", href: "https://resend.com" },
+      { title: "Email via Postmark", href: "https://postmarkapp.com" },
       { title: "Vercel ready", href: "https://vercel.com" },
       { title: "Metadata SEO" },
       { title: "Geist Font", href: "https://vercel.com/font" },

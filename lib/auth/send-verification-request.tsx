@@ -6,7 +6,7 @@ import { usersTable } from "@/drizzle/schema"
 import { Template as SignInEmail } from "@/emails/signin-email"
 import { env } from "@/env"
 import { db } from "@/lib/db"
-import { emailClient } from "@/lib/email"
+import { sendEmail } from "@/lib/email/send-email"
 
 type SendVerificationRequestParams = Parameters<
   EmailConfig["sendVerificationRequest"]
@@ -33,12 +33,12 @@ export async function sendVerificationRequest({
       url={url}
     />
   )
-  const html = await render(template)
-  const text = await render(template, { plainText: true })
+  const html = await render(template, { minify: false })
+  const text = await render(template, { plainText: true, minify: false })
 
-  await emailClient().emails.send({
-    from: env.EMAIL_FROM,
+  await sendEmail({
     to: email,
+    from: env.EMAIL_FROM,
     headers: {
       "X-Entity-Ref-ID": Date.now().toString()
     },

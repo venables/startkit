@@ -1,0 +1,56 @@
+diff --git a/node_modules/jsx-email/dist/index.js b/node_modules/jsx-email/dist/index.js
+index 27b1de3..d28bf47 100644
+--- a/node_modules/jsx-email/dist/index.js
++++ b/node_modules/jsx-email/dist/index.js
+@@ -1040,7 +1040,7 @@ Text.displayName = "Text";
+ var import_html_to_text = require("html-to-text");
+ 
+ // src/render/process.ts
+-var import_minify_preset = require("@jsx-email/minify-preset");
++// var import_minify_preset = require("@jsx-email/minify-preset");
+ var import_pretty = __toESM(require("pretty"));
+ var jsxEmailTags = ["jsx-email-cond"];
+ var processHtml = /* @__PURE__ */ __name(async ({ html, minify, pretty }) => {
+@@ -1075,10 +1075,10 @@ var processHtml = /* @__PURE__ */ __name(async ({ html, minify, pretty }) => {
+   }
+   __name(rehypeMoveStyle, "rehypeMoveStyle");
+   let processor = rehype().data("settings", settings).use(rehypeMoveStyle);
+-  if (minify) {
+-    const preset = await (0, import_minify_preset.minifyPreset)();
+-    processor = processor.use(preset);
+-  }
++  // if (minify) {
++  //   const preset = await (0, import_minify_preset.minifyPreset)();
++  //   processor = processor.use(preset);
++  // }
+   const doc = await processor.use(stringify, {
+     allowDangerousCharacters: true,
+     allowDangerousHtml: true,
+diff --git a/node_modules/jsx-email/dist/index.mjs b/node_modules/jsx-email/dist/index.mjs
+index 90b43c1..15bffd5 100644
+--- a/node_modules/jsx-email/dist/index.mjs
++++ b/node_modules/jsx-email/dist/index.mjs
+@@ -976,7 +976,7 @@ Text.displayName = "Text";
+ import { htmlToText } from "html-to-text";
+ 
+ // src/render/process.ts
+-import { minifyPreset } from "@jsx-email/minify-preset";
++// import { minifyPreset } from "@jsx-email/minify-preset";
+ import prettyHtml from "pretty";
+ var jsxEmailTags = ["jsx-email-cond"];
+ var processHtml = /* @__PURE__ */ __name(async ({ html, minify, pretty }) => {
+@@ -1011,10 +1011,10 @@ var processHtml = /* @__PURE__ */ __name(async ({ html, minify, pretty }) => {
+   }
+   __name(rehypeMoveStyle, "rehypeMoveStyle");
+   let processor = rehype().data("settings", settings).use(rehypeMoveStyle);
+-  if (minify) {
+-    const preset = await minifyPreset();
+-    processor = processor.use(preset);
+-  }
++  // if (minify) {
++  //   const preset = await minifyPreset();
++  //   processor = processor.use(preset);
++  // }
+   const doc = await processor.use(stringify, {
+     allowDangerousCharacters: true,
+     allowDangerousHtml: true,

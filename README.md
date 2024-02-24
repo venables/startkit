@@ -18,7 +18,7 @@
 - [TailwindCSS](https://tailwindcss.com/) for utility-first CSS.
 - Gorgeous UI built with [Radix](https://www.radix-ui.com/) and [shadcn/ui](https://ui.shadcn.com/).
 - Authentication via [Next Auth](https://next-auth.js.org/) version 5.
-- Email via [Resend](https://resend.com) and [react email](https://react.email/).
+- Email via [Postmark](https://postmarkapp.com) and [jsx-email](https://jsx.email/).
 - The beautiful [Geist](https://vercel.com/font) typeface.
 - [Next Metadata API](https://beta.nextjs.org/docs/api-reference/metadata) for SEO handling, with file-system handlers.
 - [Jest](https://jestjs.io/) testing, optimized for Next.js
@@ -125,7 +125,7 @@ bun run db studio
 
 ## Email
 
-Email is currently configured to send via [Resend](https://resend.com), and uses the wonderful [jsx-email](https://jsx.email) library.
+Email is configured to send via the amazing [Postmark](https://postmarkapp.com) email service, and uses the wonderful [jsx-email](https://jsx.email) library.
 
 Email templates live with your react code and are defined in [`./emails`](./emails).
 
