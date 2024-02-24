@@ -1,8 +1,9 @@
 import { eq } from "drizzle-orm"
+import { render } from "jsx-email"
 import { type EmailConfig } from "next-auth/providers"
 
 import { usersTable } from "@/drizzle/schema"
-import SignInEmail from "@/emails/signin-email"
+import { Template as SignInEmail } from "@/emails/signin-email"
 import { env } from "@/env"
 import { db } from "@/lib/db"
 import { emailClient } from "@/lib/email"
@@ -25,6 +26,16 @@ export async function sendVerificationRequest({
 
   const user = users[0]
 
+  const template = (
+    <SignInEmail
+      emailAddress={email}
+      existingUser={Boolean(user?.emailVerified)}
+      url={url}
+    />
+  )
+  const html = await render(template)
+  const text = await render(template, { plainText: true })
+
   await emailClient().emails.send({
     from: env.EMAIL_FROM,
     to: email,
@@ -34,12 +45,7 @@ export async function sendVerificationRequest({
     subject: user?.emailVerified
       ? "Sign in to StartKit"
       : "Welcome to StartKit!",
-    react: (
-      <SignInEmail
-        emailAddress={email}
-        existingUser={Boolean(user?.emailVerified)}
-        url={url}
-      />
-    )
+    html,
+    text
   })
 }

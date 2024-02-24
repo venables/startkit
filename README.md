@@ -125,7 +125,7 @@ bun run db studio
 
 ## Email
 
-Email is currently configured to send via [Resend](https://resend.com), and uses the wonderful [react-email](https://react.email) library.
+Email is currently configured to send via [Resend](https://resend.com), and uses the wonderful [jsx-email](https://jsx.email) library.
 
 Email templates live with your react code and are defined in [`./emails`](./emails).
 

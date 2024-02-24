@@ -9,17 +9,17 @@ import {
   Preview,
   Section,
   Text
-} from "@react-email/components"
+} from "jsx-email"
 
 import { siteConfig } from "../config"
 
-export interface SignInEmailProps {
+export type SignInEmailProps = {
   existingUser?: boolean
   emailAddress: string
   url: string
 }
 
-export default function SignInEmail({
+export function Template({
   url,
   emailAddress,
   existingUser = false
@@ -36,7 +36,7 @@ export default function SignInEmail({
         <Container style={container}>
           <Heading style={headingTop}>{siteConfig.name}</Heading>
           <Heading style={headingPrimary}>
-            <span style={bold}>{existingUser ? "Sign in" : "Welcome"}</span> to{" "}
+            <span>{existingUser ? "Sign in" : "Welcome"} to </span>
             <span style={bold}>{siteConfig.name}</span>
           </Heading>
           <Text style={paragraph}>
@@ -54,7 +54,7 @@ export default function SignInEmail({
             )}
           </Text>
           <Section style={buttonSection}>
-            <Button style={button} href={url}>
+            <Button href={url} style={button}>
               {existingUser ? "Sign in to my account" : "Verify my email"}
             </Button>
           </Section>
