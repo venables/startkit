@@ -1,3 +1,7 @@
+const { resolve } = require("node:path")
+
+const project = resolve(process.cwd(), "tsconfig.json")
+
 /** @type {import("eslint").Linter.Config} */
 module.exports = {
   root: true,
@@ -10,12 +14,30 @@ module.exports = {
     "next/core-web-vitals",
     "plugin:tailwindcss/recommended"
   ],
-  // parser: "@typescript-eslint/parser",
-  // plugins: ["@typescript-eslint"],
+  env: {
+    node: true,
+    browser: true
+  },
+  parser: "@typescript-eslint/parser",
   parserOptions: {
-    tsconfigRootDir: __dirname,
     project: true
   },
+  settings: {
+    "import/resolver": {
+      typescript: {
+        project
+      }
+    },
+    tailwindcss: {
+      callees: ["className", "clsx", "cls", "cva", "cn"]
+    }
+  },
+  ignorePatterns: [
+    // Ignore dotfiles
+    ".*.js",
+    "node_modules/",
+    "dist/"
+  ],
   overrides: [
     /**
      * Config files (ex: jest.config.js, prettier.config.js, tailwind.config.js)
@@ -80,11 +102,6 @@ module.exports = {
       }
     }
   ],
-  settings: {
-    tailwindcss: {
-      callees: ["className", "clsx", "cls", "cva", "cn"]
-    }
-  },
   rules: {
     "@typescript-eslint/consistent-type-definitions": ["error", "type"],
     "@typescript-eslint/consistent-type-imports": [
@@ -107,6 +124,13 @@ module.exports = {
         argsIgnorePattern: "^_",
         caughtErrors: "none",
         varsIgnorePattern: "^_"
+      }
+    ],
+    "@typescript-eslint/restrict-template-expressions": [
+      "warn",
+      {
+        allowBoolean: true,
+        allowNumber: true
       }
     ],
     "import/order": [
