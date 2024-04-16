@@ -9,7 +9,7 @@
     "clean": "git clean -xdf .next",
     "db": "drizzle-kit",
     "db:migrate": "npx tsx ./bin/migrate.ts",
-    "dev": "next dev",
+    "dev": "next dev --turbo",
     "dev:email": "email preview ./emails",
     "format": "prettier --write . \"!drizzle/**/*.json\" --ignore-path .gitignore",
     "format:check": "prettier --check . \"!drizzle/**/*.json\" --ignore-path .gitignore",

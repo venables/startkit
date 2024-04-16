@@ -9,7 +9,10 @@ const nextConfig = {
    * Toggle experimental features
    */
   experimental: {
-    mdxRs: true
+    mdxRs: true,
+    turbo: {
+      resolveExtensions: [".mdx", ".tsx", ".ts", ".jsx", ".js", ".mjs", ".json"]
+    }
   },
   /**
    * Disable the `x-powered-by: nextjs` header
