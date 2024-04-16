@@ -21,7 +21,7 @@
 - Email via [Postmark](https://postmarkapp.com) and [jsx-email](https://jsx.email/).
 - The beautiful [Geist](https://vercel.com/font) typeface.
 - [Next Metadata API](https://beta.nextjs.org/docs/api-reference/metadata) for SEO handling, with file-system handlers.
-- [Jest](https://jestjs.io/) testing, optimized for Next.js
+- [Vitest](https://vitest.dev) testing, optimized for Next.js
 - Dark Mode support (without bypassing Server Components).
 - Sane VSCode settings and recommended extensions.
 
@@ -184,7 +184,7 @@ to check for format errors, run:
 bun run format:check
 ```
 
-### Testing via Jest
+### Testing via Vitest
 
 ```sh
 bun run test

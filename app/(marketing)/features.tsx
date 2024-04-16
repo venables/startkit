@@ -34,7 +34,7 @@ export function Features() {
       { title: "Metadata SEO" },
       { title: "Geist Font", href: "https://vercel.com/font" },
       { title: "Lucide Icons", href: "https://lucide.dev" },
-      { title: "Jest" },
+      { title: "Vitest", href: "https://vitest.dev" },
       { title: "Dark Mode" },
       {
         title: "Toasts",
