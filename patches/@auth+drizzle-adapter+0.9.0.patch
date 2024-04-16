@@ -42,10 +42,10 @@ index 600af0e..e08e1f3 100644
  //# sourceMappingURL=pg.d.ts.map
 \ No newline at end of file
 diff --git a/node_modules/@auth/drizzle-adapter/lib/pg.js b/node_modules/@auth/drizzle-adapter/lib/pg.js
-index 2ae39ca..c0cad4b 100644
+index 2ae39ca..06f25ad 100644
 --- a/node_modules/@auth/drizzle-adapter/lib/pg.js
 +++ b/node_modules/@auth/drizzle-adapter/lib/pg.js
-@@ -42,13 +42,13 @@ export function createTables(pgTable) {
+@@ -42,13 +42,14 @@ export function createTables(pgTable) {
      }));
      return { users, accounts, sessions, verificationTokens };
  }
@@ -55,10 +55,11 @@ index 2ae39ca..c0cad4b 100644
 +    const { users, accounts, sessions, verificationTokens } = tables || createTables(tableFn);
      return {
          async createUser(data) {
++            const { id: _id, ...rest } = data; // rely on the db for id generation
              return await client
                  .insert(users)
 -                .values({ ...data, id: crypto.randomUUID() })
-+                .values(data)
++                .values(rest)
                  .returning()
                  .then((res) => res[0] ?? null);
          },

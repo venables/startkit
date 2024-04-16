@@ -1,8 +1,28 @@
 diff --git a/node_modules/jsx-email/dist/index.js b/node_modules/jsx-email/dist/index.js
-index 27b1de3..d28bf47 100644
+index 27b1de3..e9a6c6e 100644
 --- a/node_modules/jsx-email/dist/index.js
 +++ b/node_modules/jsx-email/dist/index.js
-@@ -1040,7 +1040,7 @@ Text.displayName = "Text";
+@@ -554,12 +554,13 @@ __name(isReactForwardRef, "isReactForwardRef");
+ var import_jsx_runtime3 = require("react/jsx-runtime");
+ var debugProps3 = debug.elements.enabled ? { dataType: "jsx-email/code" } : {};
+ var getHighlighter = (0, import_p_memoize.default)(async (language, theme = "nord") => {
+-  const { getHighlighter: getHighBro } = await import("shikiji");
+-  const shiki = await getHighBro({
+-    langs: language ? [language] : [],
+-    themes: [theme]
+-  });
+-  return shiki;
++  return null
++  // const { getHighlighter: getHighBro } = await import("shikiji");
++  // const shiki = await getHighBro({
++  //   langs: language ? [language] : [],
++  //   themes: [theme]
++  // });
++  // return shiki;
+ });
+ var Renderer = /* @__PURE__ */ __name((props) => {
+   const { children, language, style, theme = "nord", ...rest } = props;
+@@ -1040,7 +1041,7 @@ Text.displayName = "Text";
  var import_html_to_text = require("html-to-text");
  
  // src/render/process.ts
@@ -11,7 +31,7 @@ index 27b1de3..d28bf47 100644
  var import_pretty = __toESM(require("pretty"));
  var jsxEmailTags = ["jsx-email-cond"];
  var processHtml = /* @__PURE__ */ __name(async ({ html, minify, pretty }) => {
-@@ -1075,10 +1075,10 @@ var processHtml = /* @__PURE__ */ __name(async ({ html, minify, pretty }) => {
+@@ -1075,10 +1076,10 @@ var processHtml = /* @__PURE__ */ __name(async ({ html, minify, pretty }) => {
    }
    __name(rehypeMoveStyle, "rehypeMoveStyle");
    let processor = rehype().data("settings", settings).use(rehypeMoveStyle);
@@ -27,10 +47,30 @@ index 27b1de3..d28bf47 100644
      allowDangerousCharacters: true,
      allowDangerousHtml: true,
 diff --git a/node_modules/jsx-email/dist/index.mjs b/node_modules/jsx-email/dist/index.mjs
-index 90b43c1..15bffd5 100644
+index 90b43c1..5a8a44f 100644
 --- a/node_modules/jsx-email/dist/index.mjs
 +++ b/node_modules/jsx-email/dist/index.mjs
-@@ -976,7 +976,7 @@ Text.displayName = "Text";
+@@ -490,12 +490,13 @@ __name(isReactForwardRef, "isReactForwardRef");
+ import { Fragment, jsx as jsx3 } from "react/jsx-runtime";
+ var debugProps3 = debug.elements.enabled ? { dataType: "jsx-email/code" } : {};
+ var getHighlighter = mem(async (language, theme = "nord") => {
+-  const { getHighlighter: getHighBro } = await import("shikiji");
+-  const shiki = await getHighBro({
+-    langs: language ? [language] : [],
+-    themes: [theme]
+-  });
+-  return shiki;
++  return null;
++  // const { getHighlighter: getHighBro } = await import("shikiji");
++  // const shiki = await getHighBro({
++  //   langs: language ? [language] : [],
++  //   themes: [theme]
++  // });
++  // return shiki;
+ });
+ var Renderer = /* @__PURE__ */ __name((props) => {
+   const { children, language, style, theme = "nord", ...rest } = props;
+@@ -976,7 +977,7 @@ Text.displayName = "Text";
  import { htmlToText } from "html-to-text";
  
  // src/render/process.ts
@@ -39,7 +79,7 @@ index 90b43c1..15bffd5 100644
  import prettyHtml from "pretty";
  var jsxEmailTags = ["jsx-email-cond"];
  var processHtml = /* @__PURE__ */ __name(async ({ html, minify, pretty }) => {
-@@ -1011,10 +1011,10 @@ var processHtml = /* @__PURE__ */ __name(async ({ html, minify, pretty }) => {
+@@ -1011,10 +1012,10 @@ var processHtml = /* @__PURE__ */ __name(async ({ html, minify, pretty }) => {
    }
    __name(rehypeMoveStyle, "rehypeMoveStyle");
    let processor = rehype().data("settings", settings).use(rehypeMoveStyle);
