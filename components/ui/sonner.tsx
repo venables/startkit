@@ -10,9 +10,9 @@ function Toaster({ ...props }: ToasterProps) {
 
   return (
     <Sonner
-      // eslint-disable-next-line tailwindcss/no-custom-classname -- needed for sonner
-      className="toaster group"
       theme={theme as ToasterProps["theme"]}
+      // eslint-disable-next-line tailwindcss/no-custom-classname -- allow 'toaster'
+      className="toaster group"
       toastOptions={{
         classNames: {
           toast:
