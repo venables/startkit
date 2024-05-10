@@ -19,7 +19,7 @@
     "setup": "./bin/setup",
     "start": "next start",
     "test": "vitest run",
-    "type-check": "tsc --noEmit --pretty"
+    "type-check": "contentlayer build > /dev/null 2>&1 || true && tsc --noEmit --pretty"
   },
   "dependencies": {
     "@auth/core": "^0.30.0",
