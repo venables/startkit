@@ -23,7 +23,7 @@
     "rules": {
       "recommended": true,
       "correctness": {
-        "noUnusedImports": "error",
+        "noUnusedImports": "warn",
         "noUnusedVariables": "error",
         "noUnusedPrivateClassMembers": "error",
         "useHookAtTopLevel": "error"

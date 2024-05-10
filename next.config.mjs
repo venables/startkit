@@ -1,19 +1,13 @@
-import "./env/env.mjs"
-
-import nextMDX from "@next/mdx"
+import { fileURLToPath } from "node:url"
+import createJiti from "jiti"
+import { withContentlayer } from "next-contentlayer"
 import { createSecureHeaders } from "next-secure-headers"
+
+const jiti = createJiti(fileURLToPath(import.meta.url))
+jiti("./env")
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  /**
-   * Toggle experimental features
-   */
-  experimental: {
-    mdxRs: true,
-    turbo: {
-      resolveExtensions: [".mdx", ".tsx", ".ts", ".jsx", ".js", ".mjs", ".json"]
-    }
-  },
   /**
    * Disable the `x-powered-by: nextjs` header
    */
@@ -31,6 +25,4 @@ const nextConfig = {
   }
 }
 
-const withMDX = nextMDX()
-
-export default withMDX(nextConfig)
+export default withContentlayer(nextConfig)

@@ -73,7 +73,7 @@ export function Footer() {
                 className="px-0 font-normal text-card-foreground underline underline-offset-4 transition-colors hover:text-card-foreground/60"
                 variant="link"
               >
-                <Link href="/privacy">Privacy</Link>
+                <Link href="/legal/privacy">Privacy</Link>
               </Button>
               .
               <Button
@@ -81,7 +81,7 @@ export function Footer() {
                 className="px-0 font-normal text-card-foreground underline underline-offset-4 transition-colors hover:text-card-foreground/60"
                 variant="link"
               >
-                <Link href="/terms">Terms</Link>
+                <Link href="/legal/terms">Terms</Link>
               </Button>
               .
             </div>

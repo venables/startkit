@@ -6,13 +6,14 @@
 
 ## Features
 
-- **Edge-driven development.** 100% on the [edge](https://nextjs.org/docs/app/building-your-application/rendering/edge-and-nodejs-runtimes) by default.
+- **Edge-driven development.** 100% on the [edge](https://nextjs.org/docs/app/building-your-application/rendering/edge-and-nodejs-runtimes) by default, but easy to move off when needed.
 - [Next.js 14](https://nextjs.org) with the `/app` directory and API Route Handlers.
 - [Bun](https://bun.sh) as a package manager!
-- [React Server Components](https://nextjs.org/docs/app/building-your-application/rendering/server-components) gallore
-- [Typescript](https://www.typescriptlang.org/) for a rock-solid codebase
+- [React Server Components](https://nextjs.org/docs/app/building-your-application/rendering/server-components) by default.
 - [Drizzle](https://orm.drizzle.team) database ORM, configured for [PostgreSQL](https://www.postgresql.org/) and [Drizzle Kit](https://orm.drizzle.team/kit-docs/overview)
 - Insanely fast linting and formatting via [Biome](https://bimoejs.dev) for readable, safe code.
+- [Contentlayer](https://contentlayer.dev) for Markdown content
+- [Typescript](https://www.typescriptlang.org/) for a rock-solid codebase
 - [TailwindCSS](https://tailwindcss.com/) for utility-first CSS.
 - Gorgeous UI built with [Radix](https://www.radix-ui.com/) and [shadcn/ui](https://ui.shadcn.com/).
 - Authentication via [Next Auth](https://next-auth.js.org/) version 5.
