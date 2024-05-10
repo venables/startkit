@@ -1,6 +1,6 @@
 import { type LegalPage, allLegalPages } from "contentlayer/generated"
 import { format, parseISO } from "date-fns"
-import { useMDXComponent } from "next-contentlayer/hooks"
+import { useMDXComponent } from "next-contentlayer2/hooks"
 
 function getSlug(page: LegalPage) {
   return page._raw.flattenedPath.replace("legal/", "")
