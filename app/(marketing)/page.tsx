@@ -6,8 +6,8 @@ import Link from "next/link"
 
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
-import { siteConfig } from "@/config"
-import { cls } from "@/lib/utils"
+import { siteConfig } from "@/config/site"
+import { cls } from "@/lib/utils/cls"
 
 import { Features } from "./features"
 

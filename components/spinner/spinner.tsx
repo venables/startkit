@@ -1,4 +1,4 @@
-import { cls } from "@/lib/utils"
+import { cls } from "@/lib/utils/cls"
 import styles from "./spinner.module.css"
 
 type Props = {

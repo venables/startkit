@@ -1,15 +1,10 @@
-import type { ReactNode } from "react"
-
 import { Footer } from "@/components/layout/footer"
 import { Header } from "@/components/layout/header"
-
-type Props = {
-  children?: ReactNode
-}
+import type { PropsWithChildren } from "react"
 
 export const runtime = "edge"
 
-export default function MarketingLayout({ children }: Props) {
+export default function MarketingLayout({ children }: PropsWithChildren) {
   return (
     <div className="flex min-h-screen flex-col">
       <Header />

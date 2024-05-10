@@ -1,7 +1,7 @@
 import { auth } from "@/auth"
 import { Logo } from "@/components/icons/brand/logo"
 import { Button } from "@/components/ui/button"
-import { siteConfig } from "@/config"
+import { siteConfig } from "@/config/site"
 import { GithubIcon } from "lucide-react"
 import Link from "next/link"
 import { UserNav } from "./header/user-nav"

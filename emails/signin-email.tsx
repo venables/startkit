@@ -10,7 +10,7 @@ import {
   Section,
   Text
 } from "jsx-email"
-import { siteConfig } from "../config"
+import { siteConfig } from "../config/site"
 
 export type SignInEmailProps = {
   existingUser?: boolean

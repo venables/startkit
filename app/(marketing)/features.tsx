@@ -6,7 +6,7 @@ import { useMemo } from "react"
 import { toast } from "sonner"
 
 import { Button } from "@/components/ui/button"
-import { cls } from "@/lib/utils"
+import { cls } from "@/lib/utils/cls"
 
 export function Features() {
   const FEATURES = useMemo(

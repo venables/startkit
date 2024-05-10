@@ -1,12 +1,8 @@
 import { redirect } from "next/navigation"
-import type { ReactNode } from "react"
+import type { PropsWithChildren } from "react"
 
 import { auth } from "@/auth"
 import { ThemePickerProvider } from "@/components/theme-picker/theme-picker-provider"
-
-type Props = {
-  children?: ReactNode
-}
 
 export const runtime = "edge"
 
@@ -18,7 +14,7 @@ async function getData() {
   }
 }
 
-export default async function AuthLayout({ children }: Props) {
+export default async function AuthLayout({ children }: PropsWithChildren) {
   await getData()
 
   return (

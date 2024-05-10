@@ -1,15 +1,11 @@
 import { ChevronLeftIcon } from "lucide-react"
 import Link from "next/link"
-import type { ReactNode } from "react"
+import type { PropsWithChildren } from "react"
 
 import { Footer } from "@/components/layout/footer"
 import { Button } from "@/components/ui/button"
 
-type Props = {
-  children?: ReactNode
-}
-
-export default function LegalLayout({ children }: Props) {
+export default function LegalLayout({ children }: PropsWithChildren) {
   return (
     <div className="flex min-h-screen flex-col">
       <div className="container mx-auto p-6">

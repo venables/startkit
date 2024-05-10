@@ -22,11 +22,25 @@
     "enabled": true,
     "rules": {
       "recommended": true,
+      "correctness": {
+        "noUnusedImports": "error",
+        "noUnusedVariables": "error",
+        "noUnusedPrivateClassMembers": "error",
+        "useHookAtTopLevel": "error"
+      },
       "nursery": {
         "useSortedClasses": {
           "level": "error",
           "options": {
             "functions": ["clsx", "cls"]
+          }
+        }
+      },
+      "style": {
+        "useFilenamingConvention": {
+          "level": "error",
+          "options": {
+            "filenameCases": ["kebab-case"]
           }
         }
       }

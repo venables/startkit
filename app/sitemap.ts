@@ -1,6 +1,5 @@
+import { fullURL } from "@/lib/utils/url-fns/full-url"
 import type { MetadataRoute } from "next"
-
-import { fullURL } from "@/lib/utils"
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [

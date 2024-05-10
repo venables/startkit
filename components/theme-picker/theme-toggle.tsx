@@ -2,7 +2,7 @@
 
 import { Button, type ButtonProps } from "@/components/ui/button"
 import { useMounted } from "@/hooks/use-mounted"
-import { cls } from "@/lib/utils"
+import { cls } from "@/lib/utils/cls"
 import { MoonIcon, SunIcon } from "lucide-react"
 import { useTheme } from "next-themes"
 import { useCallback } from "react"

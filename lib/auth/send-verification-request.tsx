@@ -1,7 +1,7 @@
+import { db } from "@/drizzle/client"
 import { usersTable } from "@/drizzle/schema"
 import { Template as SignInEmail } from "@/emails/signin-email"
 import { env } from "@/env"
-import { db } from "@/lib/db"
 import { sendEmail } from "@/lib/email/send-email"
 import { eq } from "drizzle-orm"
 import { render } from "jsx-email"

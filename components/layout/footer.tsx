@@ -1,7 +1,7 @@
 import { XSocialIcon } from "@/components/icons/social"
 import { ThemePicker } from "@/components/theme-picker"
 import { Button } from "@/components/ui/button"
-import { siteConfig } from "@/config"
+import { siteConfig } from "@/config/site"
 import { GithubIcon } from "lucide-react"
 import Link from "next/link"
 

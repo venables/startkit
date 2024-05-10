@@ -4,7 +4,7 @@ import Link from "next/link"
 import { UserAuthForm } from "@/components/auth/user-auth-form"
 import { Logo } from "@/components/icons/brand/logo"
 import { Button } from "@/components/ui/button"
-import { siteConfig } from "@/config"
+import { siteConfig } from "@/config/site"
 
 export const metadata: Metadata = {
   title: `Sign in to ${siteConfig.name}`,

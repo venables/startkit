@@ -27,12 +27,3 @@ export function appHost(includeProtocol = true): string {
     ? host("")
     : host("").replace("https://", "").replace("http://", "")
 }
-
-/**
- * Build a URL for the given path
- *
- * @returns the URL for the given path
- */
-export function fullURL(path = "", hostname = appHost()): URL {
-  return new URL(path, hostname)
-}

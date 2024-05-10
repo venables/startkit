@@ -2,13 +2,14 @@ import "./globals.css"
 import { GeistMono } from "geist/font/mono"
 import { GeistSans } from "geist/font/sans"
 import type { Metadata, Viewport } from "next"
-import type { ReactNode } from "react"
+import type { PropsWithChildren } from "react"
 
 import { TailwindIndicator } from "@/components/debug/tailwind-indicator"
 import { Analytics } from "@/components/layout/analytics"
 import { Toaster } from "@/components/ui/sonner"
-import { siteConfig } from "@/config"
-import { cls, fullURL } from "@/lib/utils"
+import { siteConfig } from "@/config/site"
+import { cls } from "@/lib/utils/cls"
+import { fullURL } from "@/lib/utils/url-fns/full-url"
 
 export const metadata: Metadata = {
   metadataBase: fullURL(),
@@ -27,11 +28,7 @@ export const viewport: Viewport = {
   ]
 }
 
-type Props = {
-  children: ReactNode
-}
-
-export default function RootLayout({ children }: Props) {
+export default function RootLayout({ children }: PropsWithChildren) {
   return (
     <html
       className={cls(
