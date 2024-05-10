@@ -1,5 +1,4 @@
 import { cls } from "@/lib/utils"
-
 import styles from "./spinner.module.css"
 
 type Props = {
@@ -13,6 +12,7 @@ export function Spinner({ className, ...props }: Props) {
       viewBox="0 0 100 100"
       {...props}
     >
+      <title>Loading</title>
       <circle cx="50" cy="50" r="45" stroke="currentColor" />
     </svg>
   )

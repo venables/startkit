@@ -1,7 +1,5 @@
-import { describe, expect, test } from "vitest"
-
 import { env } from "@/env"
-
+import { describe, expect, test } from "vitest"
 import { appHost, fullURL } from "./url-fns"
 
 describe("appHost()", () => {

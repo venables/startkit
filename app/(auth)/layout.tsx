@@ -1,5 +1,5 @@
 import { redirect } from "next/navigation"
-import { type ReactNode } from "react"
+import type { ReactNode } from "react"
 
 import { auth } from "@/auth"
 import { ThemePickerProvider } from "@/components/theme-picker/theme-picker-provider"

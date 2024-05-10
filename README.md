@@ -12,9 +12,7 @@
 - [React Server Components](https://nextjs.org/docs/app/building-your-application/rendering/server-components) gallore
 - [Typescript](https://www.typescriptlang.org/) for a rock-solid codebase
 - [Drizzle](https://orm.drizzle.team) database ORM, configured for [PostgreSQL](https://www.postgresql.org/) and [Drizzle Kit](https://orm.drizzle.team/kit-docs/overview)
-- Edge runtime ready.
-- Strict, recommended [ESLint](https://eslint.org/) and [Prettier](https://prettier.io/) config using the [Vercel Style Guide](https://github.com/vercel/style-guide) for readable, safe code.
-- Extra linting power with [Oxlint](https://oxc-project.github.io)
+- Insanely fast linting and formatting via [Biome](https://bimoejs.dev) for readable, safe code.
 - [TailwindCSS](https://tailwindcss.com/) for utility-first CSS.
 - Gorgeous UI built with [Radix](https://www.radix-ui.com/) and [shadcn/ui](https://ui.shadcn.com/).
 - Authentication via [Next Auth](https://next-auth.js.org/) version 5.
@@ -154,7 +152,7 @@ where `button` can be any UI element from the project.
 
 ## Linting / Checking the codebase
 
-To run a full check of the codebase (type-check, lint, prettier check, test), run:
+To run a full check of the codebase (type-check, lint, format check, test), run:
 
 ```sh
 bun run check
@@ -172,7 +170,7 @@ bun run lint
 bun run type-check
 ```
 
-### Formatting with Prettier
+### Formatting with Biome
 
 ```sh
 bun run format

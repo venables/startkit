@@ -1,8 +1,3 @@
-import { DrizzleAdapter } from "@auth/drizzle-adapter"
-import { type NextAuthConfig } from "next-auth"
-import GitHub from "next-auth/providers/github"
-import Google from "next-auth/providers/google"
-
 import {
   accountsTable,
   sessionsTable,
@@ -11,6 +6,10 @@ import {
 } from "@/drizzle/schema"
 import { HttpEmailProvider } from "@/lib/auth/http-email-provider"
 import { db } from "@/lib/db"
+import { DrizzleAdapter } from "@auth/drizzle-adapter"
+import type { NextAuthConfig } from "next-auth"
+import GitHub from "next-auth/providers/github"
+import Google from "next-auth/providers/google"
 
 export default {
   /**

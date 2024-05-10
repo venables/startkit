@@ -1,9 +1,8 @@
+import { join } from "node:path"
+import { env } from "@/env"
 import { drizzle } from "drizzle-orm/postgres-js"
 import { migrate } from "drizzle-orm/postgres-js/migrator"
-import { join } from "path"
 import postgres from "postgres"
-
-import { env } from "@/env"
 
 const client = postgres(env.DATABASE_URL, { ssl: "require", max: 1 })
 const db = drizzle(client)

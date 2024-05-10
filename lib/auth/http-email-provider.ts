@@ -1,7 +1,5 @@
-import { type Provider } from "next-auth/providers"
-
 import { env } from "@/env"
-
+import type { Provider } from "next-auth/providers"
 import { sendVerificationRequest } from "./send-verification-request"
 
 /**

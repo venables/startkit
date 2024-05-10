@@ -1,3 +1,6 @@
+import { Label } from "@/components/ui/label"
+import { cn } from "@/lib/utils"
+import type * as LabelPrimitive from "@radix-ui/react-label"
 import { Slot } from "@radix-ui/react-slot"
 import * as React from "react"
 import {
@@ -8,11 +11,6 @@ import {
   FormProvider,
   useFormContext
 } from "react-hook-form"
-
-import { Label } from "@/components/ui/label"
-import { cn } from "@/lib/utils"
-
-import type * as LabelPrimitive from "@radix-ui/react-label"
 
 const Form = FormProvider
 
@@ -45,7 +43,6 @@ const useFormField = () => {
 
   const fieldState = getFieldState(fieldContext.name, formState)
 
-  // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition -- false positive
   if (!fieldContext) {
     throw new Error("useFormField should be used within <FormField>")
   }
@@ -131,7 +128,7 @@ const FormDescription = React.forwardRef<
     <p
       ref={ref}
       id={formDescriptionId}
-      className={cn("text-sm text-muted-foreground", className)}
+      className={cn("text-muted-foreground text-sm", className)}
       {...props}
     />
   )
@@ -153,7 +150,7 @@ const FormMessage = React.forwardRef<
     <p
       ref={ref}
       id={formMessageId}
-      className={cn("text-sm font-medium text-destructive", className)}
+      className={cn("font-medium text-destructive text-sm", className)}
       {...props}
     >
       {body}

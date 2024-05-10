@@ -1,5 +1,4 @@
 import { describe, expect, test } from "vitest"
-
 import { getInitials } from "./get-initials"
 
 const testNames = [
@@ -18,9 +17,9 @@ const testNames = [
 ]
 
 describe("getInitials()", () => {
-  testNames.forEach(({ name, initials }) => {
+  for (const { name, initials } of testNames) {
     test(`properly handles '${name}'`, () => {
       expect(getInitials(name)).toEqual(initials)
     })
-  })
+  }
 })

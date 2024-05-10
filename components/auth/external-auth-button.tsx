@@ -1,11 +1,10 @@
-import { GithubIcon } from "lucide-react"
-import { type LucideIcon } from "lucide-react"
-import { signIn } from "next-auth/react"
-import { useCallback, useMemo, useState } from "react"
-
 import { GoogleSocialIcon } from "@/components/icons/social"
 import { Spinner } from "@/components/spinner"
 import { Button } from "@/components/ui/button"
+import { GithubIcon } from "lucide-react"
+import type { LucideIcon } from "lucide-react"
+import { signIn } from "next-auth/react"
+import { useCallback, useMemo, useState } from "react"
 
 const PROVIDERS = {
   google: {

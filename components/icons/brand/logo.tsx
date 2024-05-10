@@ -1,5 +1,5 @@
 import { ShellIcon } from "lucide-react"
-import { type LucideProps } from "lucide-react"
+import type { LucideProps } from "lucide-react"
 
 type LogoProps = LucideProps
 

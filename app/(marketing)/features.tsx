@@ -20,12 +20,7 @@ export function Features() {
       { title: "API Route Handlers" },
       { title: "Authentication (Email + OAuth)" },
       { title: "Typescript (Strict)" },
-      {
-        title: "Vercel Style Guide",
-        href: "https://github.com/vercel/style-guide"
-      },
-      { title: "Oxlint", href: "https://oxc-project.github.io" },
-      { title: "ESLint + Prettier" },
+      { title: "Biome", href: "https://biomejs.dev" },
       { title: "TailwindCSS", href: "https://tailwindcss.com" },
       { title: "Radix UI", href: "https://www.radix-ui.com" },
       { title: "PostgreSQL" },

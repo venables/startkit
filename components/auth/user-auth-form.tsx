@@ -1,23 +1,21 @@
 "use client"
 
-import { zodResolver } from "@hookform/resolvers/zod"
-import { MailIcon } from "lucide-react"
-import { useSearchParams } from "next/navigation"
-import { signIn } from "next-auth/react"
-import { type SignInResponse } from "next-auth/react"
-import { useCallback, useEffect, useMemo, useState } from "react"
-import { type HTMLAttributes } from "react"
-import { useForm } from "react-hook-form"
-import { toast } from "sonner"
-import { type z } from "zod"
-
 import { Spinner } from "@/components/spinner"
 import { Button } from "@/components/ui/button"
 import { Form, FormControl, FormField, FormItem } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
 import { cls } from "@/lib/utils"
 import { userAuthSchema } from "@/lib/validations"
-
+import { zodResolver } from "@hookform/resolvers/zod"
+import { MailIcon } from "lucide-react"
+import { signIn } from "next-auth/react"
+import type { SignInResponse } from "next-auth/react"
+import { useSearchParams } from "next/navigation"
+import { useCallback, useEffect, useMemo, useState } from "react"
+import type { HTMLAttributes } from "react"
+import { useForm } from "react-hook-form"
+import { toast } from "sonner"
+import type { z } from "zod"
 import { ExternalAuthButton } from "./external-auth-button"
 
 type FormData = z.infer<typeof userAuthSchema>
@@ -45,12 +43,12 @@ function handleError(error?: string | null) {
       return toast("Login required", {
         description: "You must be logged in to view this page"
       })
-    case "OAuthCallback":
-    case "OAuthCreateAccount":
-    case "OAuthSignin":
-    case "EmailCreateAccount":
-    case "Callback":
-    case "Default":
+    // case "OAuthCallback":
+    // case "OAuthCreateAccount":
+    // case "OAuthSignin":
+    // case "EmailCreateAccount":
+    // case "Callback":
+    // case "Default":
     default:
       return toast("Something went wrong.", {
         description: "Your sign in request failed. Please try again."
@@ -104,7 +102,6 @@ export function UserAuthForm({ className, ...props }: Props) {
           callbackUrl: searchParams.get("from") ?? "/"
         })
       } catch (err) {
-        // eslint-disable-next-line no-console -- we want to log this error
         console.error(err)
       }
 

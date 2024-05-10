@@ -1,12 +1,10 @@
 import NextAuth, { type DefaultSession } from "next-auth"
-
 import authConfig from "./auth.config"
 
 declare module "next-auth" {
   /**
    * Add additional attributes to the session object.
    */
-  // eslint-disable-next-line @typescript-eslint/consistent-type-definitions -- This is a module augmentation
   interface Session {
     user?: {
       /** The user's id. */

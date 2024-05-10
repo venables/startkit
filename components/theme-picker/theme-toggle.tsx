@@ -1,12 +1,11 @@
 "use client"
 
-import { MoonIcon, SunIcon } from "lucide-react"
-import { useTheme } from "next-themes"
-import { useCallback } from "react"
-
 import { Button, type ButtonProps } from "@/components/ui/button"
 import { useMounted } from "@/hooks/use-mounted"
 import { cls } from "@/lib/utils"
+import { MoonIcon, SunIcon } from "lucide-react"
+import { useTheme } from "next-themes"
+import { useCallback } from "react"
 
 export type ThemeToggleProps = ButtonProps & {
   iconClassName?: string

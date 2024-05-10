@@ -1,7 +1,7 @@
 import "./env/env.mjs"
 
-import { createSecureHeaders } from "next-secure-headers"
 import nextMDX from "@next/mdx"
+import { createSecureHeaders } from "next-secure-headers"
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {

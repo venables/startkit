@@ -10,7 +10,6 @@ import {
   Section,
   Text
 } from "jsx-email"
-
 import { siteConfig } from "../config"
 
 export type SignInEmailProps = {

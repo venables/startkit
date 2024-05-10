@@ -1,5 +1,5 @@
 import { GithubIcon } from "lucide-react"
-import { type Metadata } from "next"
+import type { Metadata } from "next"
 import { Permanent_Marker as PermanentMarker } from "next/font/google"
 import Image from "next/image"
 import Link from "next/link"
@@ -15,10 +15,12 @@ const handwriting = PermanentMarker({ weight: "400", subsets: ["latin"] })
 
 export const metadata: Metadata = {
   title: "A sane way to start your next next project (on the edge)",
-  description: `Clean, understandable code. The latest best practices. Best-in-class open source libraries. And 100% on the edge.`,
+  description:
+    "Clean, understandable code. The latest best practices. Best-in-class open source libraries. And 100% on the edge.",
   openGraph: {
     title: "A sane way to start your next next project (on the edge)",
-    description: `Clean, understandable code. The latest best practices. Best-in-class open source libraries. And 100% on the edge.`
+    description:
+      "Clean, understandable code. The latest best practices. Best-in-class open source libraries. And 100% on the edge."
   }
 }
 
@@ -30,11 +32,11 @@ export default function Home() {
           <Badge className="font-bold sm:text-lg" variant="secondary">
             {siteConfig.name}
           </Badge>
-          <h1 className="relative mb-5 text-center text-4xl font-extrabold leading-none tracking-tight md:text-6xl">
+          <h1 className="relative mb-5 text-center font-extrabold text-4xl leading-none tracking-tight md:text-6xl">
             A sane way to start your next{" "}
             <Button
               asChild
-              className="p-0 text-4xl font-extrabold leading-none tracking-tight text-muted-foreground md:text-6xl"
+              className="p-0 font-extrabold text-4xl text-muted-foreground leading-none tracking-tight md:text-6xl"
               variant="ghost"
             >
               <Link href="https://nextjs.org/" rel="noreferrer" target="_blank">
@@ -45,14 +47,14 @@ export default function Home() {
             <span
               className={cls(
                 handwriting.className,
-                "bottom-0 -mb-6 block -rotate-6 text-2xl text-red-500 md:absolute md:right-0 md:text-4xl"
+                "-mb-6 -rotate-6 bottom-0 block text-2xl text-red-500 md:absolute md:right-0 md:text-4xl"
               )}
             >
               ^ on the edge
             </span>
           </h1>
 
-          <h2 className="mt-6 pb-6 pt-2">
+          <h2 className="mt-6 pt-2 pb-6">
             Clean, understandable code. The latest best practices. Best-in-class
             open source libraries.{" "}
             <span className="font-bold">And 100% on the edge.</span>
@@ -60,7 +62,7 @@ export default function Home() {
 
           <Button
             asChild
-            className="text-lg font-semibold tracking-tighter"
+            className="font-semibold text-lg tracking-tighter"
             size="lg"
             variant="secondary"
           >
@@ -93,7 +95,7 @@ export default function Home() {
       </section>
 
       <section className="mt-12 flex h-full grow flex-col items-center justify-center space-y-12 px-4 sm:px-0">
-        <h2 className="text-3xl font-bold">What&apos;s included</h2>
+        <h2 className="font-bold text-3xl">What&apos;s included</h2>
         <Features />
 
         <div className="flex flex-col items-center justify-center space-y-2">

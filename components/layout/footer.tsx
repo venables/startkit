@@ -1,10 +1,9 @@
-import { GithubIcon } from "lucide-react"
-import Link from "next/link"
-
 import { XSocialIcon } from "@/components/icons/social"
 import { ThemePicker } from "@/components/theme-picker"
 import { Button } from "@/components/ui/button"
 import { siteConfig } from "@/config"
+import { GithubIcon } from "lucide-react"
+import Link from "next/link"
 
 const navigation = [
   {

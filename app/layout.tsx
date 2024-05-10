@@ -1,8 +1,8 @@
 import "./globals.css"
 import { GeistMono } from "geist/font/mono"
 import { GeistSans } from "geist/font/sans"
-import { type Metadata, type Viewport } from "next"
-import { type ReactNode } from "react"
+import type { Metadata, Viewport } from "next"
+import type { ReactNode } from "react"
 
 import { TailwindIndicator } from "@/components/debug/tailwind-indicator"
 import { Analytics } from "@/components/layout/analytics"

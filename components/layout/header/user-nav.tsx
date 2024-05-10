@@ -1,9 +1,5 @@
 "use client"
 
-import { type User } from "next-auth"
-import { signOut } from "next-auth/react"
-import { useCallback, useState } from "react"
-
 import {
   AlertDialog,
   AlertDialogAction,
@@ -27,6 +23,9 @@ import {
   DropdownMenuTrigger
 } from "@/components/ui/dropdown-menu"
 import { getInitials } from "@/lib/utils/string-fns/get-initials"
+import type { User } from "next-auth"
+import { signOut } from "next-auth/react"
+import { useCallback, useState } from "react"
 
 type UserNavProps = {
   user: User
@@ -69,8 +68,8 @@ export function UserNav({ user }: UserNavProps) {
         <DropdownMenuContent align="end" className="w-56" forceMount>
           <DropdownMenuLabel className="font-normal">
             <div className="flex flex-col space-y-1">
-              <p className="text-sm font-medium leading-none">{user.name}</p>
-              <p className="text-xs leading-none text-muted-foreground">
+              <p className="font-medium text-sm leading-none">{user.name}</p>
+              <p className="text-muted-foreground text-xs leading-none">
                 {user.email}
               </p>
             </div>
