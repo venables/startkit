@@ -1,17 +1,28 @@
+import { DrizzleAdapter } from "@auth/drizzle-adapter"
 import { type NextAuthConfig } from "next-auth"
 import GitHub from "next-auth/providers/github"
 import Google from "next-auth/providers/google"
 
+import {
+  accountsTable,
+  sessionsTable,
+  usersTable,
+  verificationTokensTable
+} from "@/drizzle/schema"
 import { HttpEmailProvider } from "@/lib/auth/http-email-provider"
-
-import { adapter } from "./lib/db/adapter"
+import { db } from "@/lib/db"
 
 export default {
   /**
    * @see {@link https://authjs.dev/reference/adapter/drizzle}
    */
-  adapter,
-
+  adapter: DrizzleAdapter(db, {
+    // @ts-expect-error custom citext column causes an error
+    usersTable,
+    accountsTable,
+    sessionsTable,
+    verificationTokensTable
+  }),
   /**
    *
    */
