@@ -1,9 +1,8 @@
+import { Footer } from "@/components/layout/footer"
+import { Button } from "@/components/ui/button"
 import { ChevronLeftIcon } from "lucide-react"
 import Link from "next/link"
 import type { PropsWithChildren } from "react"
-
-import { Footer } from "@/components/layout/footer"
-import { Button } from "@/components/ui/button"
 
 export default function LegalLayout({ children }: PropsWithChildren) {
   return (

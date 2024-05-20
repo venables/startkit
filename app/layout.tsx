@@ -1,15 +1,14 @@
 import "./globals.css"
-import { GeistMono } from "geist/font/mono"
-import { GeistSans } from "geist/font/sans"
-import type { Metadata, Viewport } from "next"
-import type { PropsWithChildren } from "react"
-
 import { TailwindIndicator } from "@/components/debug/tailwind-indicator"
 import { Analytics } from "@/components/layout/analytics"
 import { Toaster } from "@/components/ui/sonner"
 import { siteConfig } from "@/config/site"
 import { cls } from "@/lib/utils/cls"
 import { fullURL } from "@/lib/utils/url-fns/full-url"
+import { GeistMono } from "geist/font/mono"
+import { GeistSans } from "geist/font/sans"
+import type { Metadata, Viewport } from "next"
+import type { PropsWithChildren } from "react"
 
 export const metadata: Metadata = {
   metadataBase: fullURL(),

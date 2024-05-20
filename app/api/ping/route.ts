@@ -1,7 +1,6 @@
+import { env } from "@/env"
 import { NextResponse } from "next/server"
 import { handler } from "typed-route-handler"
-
-import { env } from "@/env"
 
 type ResponseData = {
   pong: string

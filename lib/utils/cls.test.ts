@@ -1,3 +1,5 @@
+/* eslint-disable tailwindcss/no-contradicting-classname -- tests class names */
+/* eslint-disable tailwindcss/no-custom-classname -- tests class names */
 import { describe, expect, test } from "vitest"
 import { cls } from "./cls"
 

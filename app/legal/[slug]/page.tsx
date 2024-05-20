@@ -20,7 +20,6 @@ export const generateMetadata = ({ params }: { params: { slug: string } }) => {
 type Props = { params: { slug: string } }
 
 export default function Page({ params }: Props) {
-  console.log(allLegalPages)
   const page = allLegalPages.find((p) => getSlug(p) === params.slug)
   if (!page) throw new Error(`Post not found for slug: ${params.slug}`)
 
@@ -29,8 +28,8 @@ export default function Page({ params }: Props) {
   return (
     <article className="mx-auto max-w-xl py-8">
       <div className="mb-8 text-center">
-        <h1 className="font-bold text-3xl">{page.title}</h1>
-        <time dateTime={page.date} className="mb-1 text-gray-600 text-xs">
+        <h1 className="text-3xl font-bold">{page.title}</h1>
+        <time dateTime={page.date} className="mb-1 text-xs text-gray-600">
           Last updated: {format(parseISO(page.date), "LLLL d, yyyy")}
         </time>
       </div>

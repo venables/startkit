@@ -11,7 +11,8 @@
 - [Bun](https://bun.sh) as a package manager!
 - [React Server Components](https://nextjs.org/docs/app/building-your-application/rendering/server-components) by default.
 - [Drizzle](https://orm.drizzle.team) database ORM, configured for [PostgreSQL](https://www.postgresql.org/) and [Drizzle Kit](https://orm.drizzle.team/kit-docs/overview)
-- Insanely fast linting and formatting via [Biome](https://bimoejs.dev) for readable, safe code.
+- Strict, recommended [ESLint](https://eslint.org/) config using the [Vercel Style Guide](https://github.com/vercel/style-guide) for readable, safe code.
+- Insanely fast formatting via [Biome](https://bimoejs.dev), with additional linting.
 - [Contentlayer](https://contentlayer.dev) for Markdown content (using the [active fork](https://github.com/timlrx/contentlayer2))
 - [Typescript](https://www.typescriptlang.org/) for a rock-solid codebase
 - [TailwindCSS](https://tailwindcss.com/) for utility-first CSS.

@@ -1,12 +1,11 @@
 "use client"
 
+import { Button } from "@/components/ui/button"
+import { cls } from "@/lib/utils/cls"
 import { CheckIcon } from "lucide-react"
 import Link from "next/link"
 import { useMemo } from "react"
 import { toast } from "sonner"
-
-import { Button } from "@/components/ui/button"
-import { cls } from "@/lib/utils/cls"
 
 export function Features() {
   const FEATURES = useMemo(
@@ -22,6 +21,11 @@ export function Features() {
       { title: "API Route Handlers" },
       { title: "Authentication (Email + OAuth)" },
       { title: "Typescript (Strict)" },
+      {
+        title: "Vercel Style Guide",
+        href: "https://github.com/vercel/style-guide"
+      },
+      { title: "ESLint" },
       { title: "TailwindCSS", href: "https://tailwindcss.com" },
       { title: "Radix UI", href: "https://www.radix-ui.com" },
       { title: "PostgreSQL" },

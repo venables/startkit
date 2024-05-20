@@ -1,9 +1,8 @@
-import Link from "next/link"
-
 import { UserAuthForm } from "@/components/auth/user-auth-form"
 import { Logo } from "@/components/icons/brand/logo"
 import { Button } from "@/components/ui/button"
 import { siteConfig } from "@/config/site"
+import Link from "next/link"
 
 export const metadata = {
   title: "Create an account",
@@ -16,7 +15,7 @@ export default function RegisterPage() {
       <div className="absolute top-4 flex w-full flex-row justify-between px-4 md:top-8">
         <Button
           asChild
-          className="z-20 flex items-center bg-transparent font-medium text-lg text-primary transition-colors hover:bg-accent lg:hover:bg-primary-foreground/10 lg:hover:text-primary-foreground lg:text-primary-foreground"
+          className="z-20 flex items-center bg-transparent text-lg font-medium text-primary transition-colors hover:bg-accent lg:text-primary-foreground lg:hover:bg-primary-foreground/10 lg:hover:text-primary-foreground"
         >
           <Link href="/">
             <Logo className="mr-2 size-6" />
@@ -29,7 +28,7 @@ export default function RegisterPage() {
         </Button>
       </div>
 
-      <div className="relative hidden h-full flex-col bg-muted p-10 text-primary-foreground lg:flex dark:border-r">
+      <div className="relative hidden h-full flex-col bg-muted p-10 text-primary-foreground dark:border-r lg:flex">
         <div className="absolute inset-0 h-full bg-primary" />
 
         <div className="relative z-20 mt-auto">
@@ -46,17 +45,17 @@ export default function RegisterPage() {
       <div className="lg:p-8">
         <div className="mx-auto flex w-full flex-col justify-center space-y-6 sm:w-[350px]">
           <div className="flex flex-col space-y-2 text-center">
-            <h1 className="font-semibold text-2xl tracking-tight">
+            <h1 className="text-2xl font-semibold tracking-tight">
               Create an account
             </h1>
-            <p className="text-muted-foreground text-sm">
+            <p className="text-sm text-muted-foreground">
               Enter your email below to create your account
             </p>
           </div>
 
           <UserAuthForm />
 
-          <p className="px-8 text-center text-muted-foreground text-sm">
+          <p className="px-8 text-center text-sm text-muted-foreground">
             By clicking continue, you agree to our{" "}
             <Button
               asChild

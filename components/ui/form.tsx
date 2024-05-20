@@ -43,6 +43,7 @@ const useFormField = () => {
 
   const fieldState = getFieldState(fieldContext.name, formState)
 
+  // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition -- from shadcn/ui - leave it
   if (!fieldContext) {
     throw new Error("useFormField should be used within <FormField>")
   }
@@ -128,7 +129,7 @@ const FormDescription = React.forwardRef<
     <p
       ref={ref}
       id={formDescriptionId}
-      className={cn("text-muted-foreground text-sm", className)}
+      className={cn("text-sm text-muted-foreground", className)}
       {...props}
     />
   )
@@ -150,7 +151,7 @@ const FormMessage = React.forwardRef<
     <p
       ref={ref}
       id={formMessageId}
-      className={cn("font-medium text-destructive text-sm", className)}
+      className={cn("text-sm font-medium text-destructive", className)}
       {...props}
     >
       {body}

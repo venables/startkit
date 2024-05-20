@@ -1,8 +1,7 @@
-import { redirect } from "next/navigation"
-import type { PropsWithChildren } from "react"
-
 import { auth } from "@/auth"
 import { ThemePickerProvider } from "@/components/theme-picker/theme-picker-provider"
+import { redirect } from "next/navigation"
+import type { PropsWithChildren } from "react"
 
 export const runtime = "edge"
 
