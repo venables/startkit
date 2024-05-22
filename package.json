@@ -6,7 +6,8 @@
   "scripts": {
     "biome": "biome check .",
     "build": "next build",
-    "check": "bun run biome && bun run lint && bun run type-check && bun run test",
+    "build:static": "contentlayer2 build",
+    "check": "bun run build:static && bun run biome && bun run lint && bun run type-check && bun run test",
     "clean": "git clean -xdf .next .contentlayer",
     "db": "drizzle-kit",
     "db:migrate": "npx tsx ./bin/migrate.ts",
@@ -20,7 +21,7 @@
     "setup": "./bin/setup",
     "start": "next start",
     "test": "vitest run",
-    "type-check": "contentlayer2 build && tsc --noEmit --pretty"
+    "type-check": "tsc --noEmit --pretty"
   },
   "dependencies": {
     "@auth/core": "^0.30.0",
